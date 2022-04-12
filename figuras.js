@@ -1,7 +1,6 @@
 // codigo del cuadrado
 
 console.group("Cuadrado");
-
 function Cuadrado(ladoCuadrado, unidadCuadrado) {
     console.log(`los lados del cuadrado miden: ${ladoCuadrado} ${unidadCuadrado}`);
 
@@ -21,28 +20,36 @@ console.groupEnd();
 // codigo del triangulo
 
 console.group("Triangulo");
+function Triangulo(ladoTriangulo1, ladoTriangulo2, baseTriangulo, unidadTriangulo) {
 
-function Triangulo(ladosTriangulo, baseTriangulo, alturaTriangulo, unidadTriangulo) {
-    console.log(`los lados del triangulo miden: ${ladosTriangulo} ${unidadTriangulo}. Su base mide ${baseTriangulo} ${unidadTriangulo}, y su altura ${alturaTriangulo} ${unidadTriangulo}`);
+    if (ladoTriangulo1 === ladoTriangulo2 && ladoTriangulo1 != baseTriangulo) {
+        console.log(`los lados del triangulo miden: ${ladoTriangulo1} ${unidadTriangulo} y su base: ${baseTriangulo} ${unidadTriangulo}`);
 
-    const perimetroTriangulo = (ladosTriangulo*2)+baseTriangulo;
-    console.log("El petrimetro del triangulo es: "+perimetroTriangulo+` ${unidadTriangulo}`);
+        const alturaTriangulo = Math.sqrt((Math.pow(ladoTriangulo1,2)-(Math.pow(baseTriangulo,2)/4)));
+        console.log(`la altura del triangulo es: ${alturaTriangulo} ${unidadTriangulo}`);
 
-    const areaTriangulo = (baseTriangulo*alturaTriangulo)/2;
-    console.log("El area del triangulo es: "+areaTriangulo+` ${unidadTriangulo}`+ "^2"); 
-    
-    var perimetroAreaTriangulo = `perimetro: ${perimetroTriangulo} ${unidadTriangulo}
-    area: ${areaTriangulo} ${unidadTriangulo}^2`
+        const perimetroTriangulo = (ladoTriangulo1*2)+baseTriangulo;
+        console.log("El petrimetro del triangulo es: "+perimetroTriangulo+` ${unidadTriangulo}`);
 
-    return perimetroAreaTriangulo;
+        const areaTriangulo = (baseTriangulo*alturaTriangulo)/2;
+        console.log("El area del triangulo es: "+areaTriangulo+` ${unidadTriangulo}`+ "^2");
+
+        var alturaPerimetroAreaTriangulo = `
+        altura: ${alturaTriangulo} ${unidadTriangulo}
+        perimetro: ${perimetroTriangulo} ${unidadTriangulo}
+        area: ${areaTriangulo} ${unidadTriangulo}^2
+        `
+        return alturaPerimetroAreaTriangulo;
+    }   else {
+            alert("Los triangulos isoceles presentan dos lados congruentes el uno con el otro y difieren de la base. Vuelve a intentarlo");
+        }   
 }
-Triangulo(6,4,5.5,"cm");
+Triangulo(6,6,4,"cm");
 console.groupEnd();
 
 // codigo del circulo
 
 console.group("Circulo");
-
 function Circulo(radioCirculo,unidadCirculo) {
     const diametroCirculo = radioCirculo*2;
     const pi = Math.PI;
@@ -95,16 +102,16 @@ function calculoCuadrado() {
 // Interaccion con HTML - Triangulo
 
 function calculoTriangulo() {
-    const inputTrianguloLados = document.getElementById("Triangulo-lados");
-    const valueTrianguloLados = inputTrianguloLados.value;
+    const inputTrianguloLado = document.getElementById("Triangulo-lado"); 
+    const valueTrianguloLado = inputTrianguloLado.value;
+    const inputTrianguloLado2 = document.getElementById("Triangulo-lado2");
+    const valueTrianguloLado2 = inputTrianguloLado2.value;
     const inputTrianguloBase = document.getElementById("Triangulo-base");
     const valueTrianguloBase = inputTrianguloBase.value;
-    const inputTrianguloAltura = document.getElementById("Triangulo-altura"); 
-    const valueTrianguloAltura = inputTrianguloAltura.value;
-    const inputTrianguloUnidad = document.getElementById("Triangulo-unidad"); 
+    const inputTrianguloUnidad = document.getElementById("Triangulo-unidad");
     const valueTrianguloUnidad = inputTrianguloUnidad.value;
 
-    const returnTriangulo = Triangulo(valueTrianguloLados,parseInt(valueTrianguloBase),valueTrianguloAltura,valueTrianguloUnidad);
+    const returnTriangulo = Triangulo(valueTrianguloLado,valueTrianguloLado2,parseInt(valueTrianguloBase),valueTrianguloUnidad);
     alert(returnTriangulo);
 }
 
@@ -120,6 +127,7 @@ function calculoCirculo() {
     alert(returnCirculo);
 }
 
+// Perro en js pq si
 
 var perro = {
     raza: "husky",
@@ -132,6 +140,7 @@ var perro = {
 
 perro.ladrido();
 alert(perro.raza);
+
 
 
 
