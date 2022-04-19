@@ -41,10 +41,7 @@ Main section form input {
     font-size: 1.3rem;
     padding: 5px;
     text-align: center;
-}
-
-Main section form input {
-    color: black;
+    color: #000;
 }
 
 Main section form input:hover {
