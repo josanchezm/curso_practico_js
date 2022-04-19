@@ -8,3 +8,28 @@
 html {
     font-size: 62.5%;
 }
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+}
+
+.footer-left li {
+    margin-left: 15px;
+}
+
+.footer-right li {
+    margin-right: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+}
