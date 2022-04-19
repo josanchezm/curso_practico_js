@@ -1,10 +1,10 @@
-# curso_practico_js
+# curso_práctico_js
 
 ....
 
-## Taller de figuras geometricas
+## Taller de figuras geométricas
 
-- Primer paso: definir las formulas
-- Segundo: implimentar las formulas en js 
+- Primer paso: definir las fórmulas
+- Segundo: implementar las fórmulas en js 
 - Tercero: crear funciones
 - Cuarto: integrar JS con HTML
