@@ -8,3 +8,68 @@
 html {
     font-size: 62.5%;
 }
+
+main {
+    display: grid;
+    grid-template: 75vh / 1fr 1fr 1fr;
+    padding: 25px;
+    margin-top: 25px;
+    gap: 15px;
+    background: linear-gradient(315deg, #56d1e6, #48b0c2);
+    box-shadow:  -30px -30px 59px #44a6b7,
+    30px 30px 59px #5ce0f7;
+}
+
+Main section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+Main section form input {
+    width: 60%;
+    font-size: 1.3rem;
+    padding: 5px;
+    text-align: center;
+}
+
+Main section form input {
+    color: black;
+}
+
+Main section form input:hover {
+    background-color: lightgray;
+}
+
+Main section form button {
+    padding: 5px;
+    margin-top: 3px;
+}
+
+Main section form button:focus {
+    background-color: lightgrey;
+}
+
+Main section h2 {
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+Main section picture {
+    width: 100px;
+}
+
+Main section picture img {
+    width: 100%;
+    object-fit: cover;
+}
+
+Main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
