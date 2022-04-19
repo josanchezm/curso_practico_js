@@ -9,9 +9,14 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    display: grid;
+    grid-template: 1fr 3fr .3fr / auto;
+}
+
 main {
     display: grid;
-    grid-template: 75vh / 1fr 1fr 1fr;
+    grid-template: auto / repeat(3,1fr);
     padding: 25px;
     margin-top: 25px;
     gap: 15px;
