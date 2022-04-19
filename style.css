@@ -9,7 +9,6 @@ html {
     font-size: 62.5%;
 }
 
-<<<<<<< HEAD
 main {
     display: grid;
     grid-template: 75vh / 1fr 1fr 1fr;
@@ -73,7 +72,8 @@ Main section {
     display: flex;
     flex-direction: column;
     align-items: center;
-=======
+}
+
 header {
     padding: 10px;
     margin-bottom: 50px;
@@ -108,5 +108,4 @@ header h1 {
 header p {
     font-size: 1.8rem;
     color: rgb(181, 181, 181);
->>>>>>> header
 }
