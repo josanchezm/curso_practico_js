@@ -129,17 +129,17 @@ function calculoCirculo() {
 
 // Perro en js pq si
 
-var perro = {
-    raza: "husky",
-    pelaje: "gris con blanco",
-    annios: 4,
-    ladrido: function ladrar() {
-        alert("wuf wuf");
-    }
-}
+// var perro = {
+//     raza: "husky",
+//     pelaje: "gris con blanco",
+//     annios: 4,
+//     ladrido: function ladrar() {
+//         alert("wuf wuf");
+//     }
+// }
 
-perro.ladrido();
-alert(perro.raza);
+// perro.ladrido();
+// alert(perro.raza);
 
 
 
