@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     font-family: 'MedievalSharp', cursive;
+    margin: 0;
+    padding: 0;   
 }
 
 html {
@@ -8,27 +10,66 @@ html {
 }
 
 body {
+    
     display: grid;
     grid-template: 1fr/1fr;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
 }
 
 ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+
+}
+
+header {
+    width: 100%;
+    padding: 25px 15px;
+    background: linear-gradient(145deg, #7f8adb, #7d8cf9);
+    box-shadow:  31px 31px 62px #6873c9,
+                 -31px -31px 62px #788aee;
+}
+
+header picture {
+    display: flex;
+    margin: 0 auto;
+    width: 75px;
+}
+
+header picture img {
+    width: 100%;
+    object-fit: contain;
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 17px;
+}
+
+header h1 {
+    margin-bottom: 0;
+    font-size: 3.6rem;
+}
+
+header p {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 25px;
+    font-weight: 700;
 }
 
 main {
+    width: 100%;
     display: grid;
     grid-template: auto / repeat(auto-fit,minmax(350px,1fr));
     grid-auto-rows: auto;
     padding: 20px 15px 80px;
     gap: 20px;
-    background: linear-gradient(315deg, #56d1e6, #48b0c2);
-    box-shadow:  -30px -30px 59px #44a6b7,
-    30px 30px 59px #5ce0f7;
+    background: linear-gradient(315deg, #9ae8f6, #88e9fa);
+    box-shadow:  -30px -30px 59px #85d5e3,
+    30px 30px 59px #84e4f5;
 }
 
 main section form {
@@ -38,7 +79,6 @@ main section form {
     text-align: center;
     font-size: 1.8rem;
     gap: 5px;
-    margin-top: 10px;
 }
 
 main section form input {
@@ -68,7 +108,7 @@ main section h2 {
 }
 
 main section picture {
-    width: 100px;
+    width: 130px;
 }
 
 main section picture img {
@@ -82,42 +122,103 @@ main section {
     align-items: center;
 }
 
-header {
-    padding: 15px 10px;
-    background: linear-gradient(145deg, #5462ce, #6475f5);
-    box-shadow:  31px 31px 62px #4753ae,
-                 -31px -31px 62px #7387ff;
+main section > picture {
+    position: relative;
 }
 
-header picture {
-    display: flex;
-    margin: 0 auto;
-    width: 75px;
+main section > picture > picture, main section > picture > p {
+    opacity: 0;
+    transition-duration: 1.5s;
 }
 
-header picture img {
-    width: 100%;
-    object-fit: contain;
+#flecha_cuadrado {
+    position: absolute;
+    top: 125px;
+    right: calc(50% - 80px/2);
+    width: 80px;
+    margin-top: 5px;
 }
 
-header section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 0;
-    font-size: 3.6rem;
-}
-
-header p {
+#lado_cuadrado {
+    position: absolute;
+    top: 160px;
+    left: calc(50% - 35.48px/2);
+    margin-top: 8px;
     font-size: 1.8rem;
-    color: #fff;
+}
+
+#flecha_triangulo_lado {
+    position: absolute;
+    width: 100px;
+    transform: rotate(-70deg);
+    top: 65px;
+    left: -40px;
+}
+
+#flecha_triangulo_base {
+    position: absolute;
+    width: 100px;
+    right: calc(50% - 100px/2);
+    bottom: 12px;
+}
+
+#flecha_triangulo_altura {
+    position: absolute;
+    top: 40px;
+    width: 130px;
+    right: -88px;
+}
+
+#lado_triangulo {
+    position: absolute;
+    top: 62px;
+    left: -32px;
+    font-size: 1.8rem;
+    transform: rotate(-70deg);
+}
+
+#base_triangulo {
+    position: relative;
+    font-size: 1.8rem;
+    top: 12px;
+    left: 20px;
+}
+
+#altura_triangulo {
+    position: absolute;
+    font-size: 1.8rem;
+    right: -87px;
+    bottom: 126px;
+    transform: rotate(-90deg);
+}
+
+#resultado_triangulo {
+    margin-top: -5px;
+}
+
+#radio_circulo {
+    position: absolute;
+    top: 0;
+    left: -110px;
+    font-size: 1.8rem;
+}
+
+#diametro_circulo {
+    position: absolute;
+    top: 38px;
+    left: -111px;
+    font-size: 1.8rem;
+}
+
+#circunferencia_circulo {
+    position: absolute;
+    bottom: 0;
+    left: -110px;
+    font-size: 1.8rem;
 }
 
 footer {
+    width: 100%;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
